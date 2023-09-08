@@ -37,7 +37,7 @@ Resources:
     Properties:
       CodeUri: on-connect/
       Handler: on-connect.handler
-      Runtime: nodejs8.10
+      Runtime: nodejs14.x
       Environment:
         Variables:
           TABLE_NAME: !Ref ConnectionsTableName
@@ -50,7 +50,7 @@ Resources:
     Properties:
       CodeUri: on-disconnect/
       Handler: on-disconnect.handler
-      Runtime: nodejs8.10
+      Runtime: nodejs14.x
       Environment:
         Variables:
           TABLE_NAME: !Ref ConnectionsTableName
@@ -78,7 +78,7 @@ Resources:
       CodeUri: push-notification/
       Handler: push-notification.handler
       MemorySize: 256
-      Runtime: nodejs8.10
+      Runtime: nodejs14.x
       Environment:
         Variables:
           CONNECTIONS_TABLE_NAME: !Ref ConnectionsTableName
